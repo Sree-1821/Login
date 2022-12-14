@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Index</h2>
+<div class="row">
+    <p>
+        @if(User.Identity.IsAuthenticated)
+        {
+            <h1> Welcome User @( User .Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name:"Guest")</h1>
+        }
+    </p>
+    
+</div>
+
